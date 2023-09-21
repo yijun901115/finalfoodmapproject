@@ -1,0 +1,89 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+
+
+<!--<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
+  </div>-->
+
+  <!--<div class="carousel-inner">-->
+
+    {% if foodstoresmenu.foodmapmenuOne %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuOne }}" class="d-block w-100" alt="...">
+    </div>
+     {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuTwo %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuTwo }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuThree %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuThree }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuFour %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuFour }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuFive %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuFive }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuSix %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuSix }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuSeven %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuSeven }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+     {% if foodstoresmenu.foodmapmenuEight %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuEight }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmenu.foodmapmenuNine %}
+    <div class="carousel-item active">
+      <img src="{{ foodstoresmenu.foodmapmenuNine }}" class="d-block w-100" alt="...">
+    </div>
+    {% endif %}
+  </div>
+
+
+ <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> -->
+</div>
+
+
+{% endblock %}

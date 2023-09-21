@@ -1,0 +1,83 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+    <div class="ChartsList">
+        <div class="top">
+            <img src="{% static 'img/3F3F3F29 1.png' %}" alt="">排行榜
+        </div>
+    </div>
+    <ul class="list-group">
+        {% for list in foodstoresinfochart %}
+        <a class="groupref" href="{% url 'chartandmap:detail' list.id %}">
+        <li class="list-group-item">
+            <div>
+                <div class="content">
+                    <div>
+                        <h1 class="font-weight-bold mb-1">{{ list.restaurantname }}</h1>
+                        <p class="font-weight-bold mb-1">地址：{{ list.address }}
+                        </p>
+                        <p class="font-weight-bold mb-1">餐廳種類：{{ list.restauranttype }}</p>
+                        <img src="{{ list.restaurantcoverphotourl}}" alt="foodpic" width="150">
+                    </div>
+                    <div class="ratingintotaloffive" style="position: absolute; right:100px;">
+                    <div class="rounded-circle">
+                        <h6>{{ list.ratingintotaloffive }}</h6>
+                    </div>
+                    </div>
+                </div><!--<img src="staticFiles/img/下載 1.png" alt="foodpic" width="150">-->
+            </div>
+        </li>
+        </a>
+        {% endfor %}
+
+        <!--<li class="list-group-item">
+            <div>
+                <div class="content">
+                    <div>
+                        <h1 class="font-weight-bold mb-1">八方雲集 (淡水學府店)</h1>
+                        <p class="font-weight-bold mb-1">地點：251新北市淡水區學府路104號
+                        </p>
+                        <p class="font-weight-bold mb-1">種類：臺式料理</p>
+                    </div>
+                    <div class="rounded-circle">
+                        <h6>4.5</h6>
+                    </div>
+                </div><img src="media/下載 1.png" alt="foodpic" width="150">
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div>
+                <div class="content">
+                    <div>
+                        <h1 class="font-weight-bold mb-1">八方雲集 (淡水學府店)</h1>
+                        <p class="font-weight-bold mb-1">地點：251新北市淡水區學府路104號
+                        </p>
+                        <p class="font-weight-bold mb-1">種類：臺式料理</p>
+                    </div>
+                    <div class="rounded-circle">
+                        <h6>4.5</h6>
+                    </div>
+                </div><img src="media/下載 1.png" alt="foodpic" width="150">
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div>
+                <div class="content">
+                    <div>
+                        <h1 class="font-weight-bold mb-1">八方雲集 (淡水學府店)</h1>
+                        <p class="font-weight-bold mb-1">地點：251新北市淡水區學府路104號
+                        </p>
+                        <p class="font-weight-bold mb-1">種類：臺式料理</p>
+                    </div>
+                    <div class="rounded-circle">
+                        <h6>4.5</h6>
+                    </div>
+                </div><img src="media/下載 1.png" alt="foodpic" width="150">
+            </div>
+        </li> -->
+
+
+    </ul>
+{% endblock %}

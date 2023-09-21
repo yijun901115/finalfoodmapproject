@@ -1,0 +1,71 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+    {% if foodstoresinfodetail %}
+    <div class="content m-3" style="display: flex; justify-items: center; align-items: center;">
+        <img src="{{foodstoresinfodetail.restaurantcoverphotourl}}" alt="" width="200">
+        <div class="m-2">
+    {% endif %}
+            <p style="font-size: 14px; margin: 0; color: #48C97C;">{{ foodstoresinfodetail.restaurantname }}</p>
+            <p style="font-size: 14px; margin: 0; color: #64E2F4;">餐廳種類：{{ foodstoresinfodetail.restauranttype }}</p>
+            <p style="font-size: 14px; margin: 0; color: #64E2F4;">地址：{{ foodstoresinfodetail.address }}</p>
+            <p style="font-size: 14px; margin: 0; color: #BDC977;">聯絡資訊：{{ foodstoresinfodetail.contactinfo }}</p>
+            <p style="font-size: 14px; margin: 0; color: #FF22E9;">評分：4.8</p>
+            <p style="font-size: 14px; margin: 0; color: #FFFFFF;">營業時間：{{ foodstoresinfodetail.openingtime }}</p>
+            <div class="district-detail" style="position: absolute; left:30px; transform: translate(0, 50px);">
+            <!--<div class="district-detail"></div>-->
+            <p style="font-size: 14px; margin:0; color: #4BC97C;">區域：{{ foodstoresinfodetail.district }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content2 justify-content-end" style="display: flex; justify-items: center; align-items: center;">
+
+        {% autoescape off %}
+        {{foodstoresinfodetail.googlemapiframeembeddedcode}}
+        {% endautoescape %}
+
+        <!--<iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.8639712085283!2d121.44472051144521!3d25.174070577632943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aff8c1544bdb%3A0x1dcf4f494b3362b!2z5reh5rGf5aSn5a24!5e0!3m2!1szh-TW!2stw!4v1693565141787!5m2!1szh-TW!2stw"
+            width="30%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>-->
+
+        <div class="google_conment">
+            <div style="display: flex;">
+
+                <p class="m-3" style="background-color: #fff;">
+                    <a href="{{ foodstoresinfodetail.googlereviewlink }}" style="text-decoration:none;  color: black;;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-google" viewBox="0 0 16 16">
+                            <path
+                                d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z">
+                            </path>
+                        </svg>評論:{{ foodstoresinfodetail.totalreviewnumber }}
+                    </a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="store_comment_and_pic m-3">
+        <p style="color: #fff;">評論/店家圖片：</p>
+    </div>-->
+
+    <!-- Container for absolute positioning -->
+    <div class="container-chartsormapdetail">
+        <!-- Absolute centered rectangle block -->
+        <div class="rectangle-block">
+            <a href="{% url 'chartandmap:menu' foodstoresinfodetail.id %}" class="image-button" style="left: 15%;">
+                <img src="{% static 'img/Component1.png' %}" alt="Button 1" style="max-width: 300px; max-height: 200px;">
+            </a>
+            <a href="{% url 'chartandmap:reviewdisplay' foodstoresinfodetail.id %}" class="image-button" style="left: 50%;">
+                <img src="{% static 'img/Component2.png' %}" alt="Button 2" style="max-width: 300px; max-height: 200px;">
+            </a>
+            <a href="{% url 'chartandmap:meals' foodstoresinfodetail.id %}" class="image-button" style="left: 85%;">
+                <img src="{% static 'img/Component3.png' %}" alt="Button 3" style="max-width: 300px; max-height: 200px;">
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+
+<div class="reviewOne" style="color:#FFFFFF;">
+{% if foodstoresreview.commentOne %}
+    <p>{{ foodstoresreview.commentOne }}</p>
+{% endif %}
+</div>
+
+<div class="reviewTwo" style="color: #FFFFFF;">
+{% if foodstoresreview.commentTwo %}
+    <p>{{ foodstoresreview.commentTwo }}</p>
+{% endif %}
+</div>
+
+<div class="reviewThree" style="color: #FFFFFF">
+{% if foodstoresreview.commentThree %}
+    <p>{{ foodstoresreview.commentThree }}</p>
+{% endif %}
+</div>
+
+<div class="reviewFour" style="color:#FFFFFF">
+{% if foodstoresreview.commentFour %}
+    <p>{{ foodstoresreview.commentFour }}</p>
+{% endif %}
+</div>
+
+<div class="reviewFive" style="color:#FFFFFF">
+{% if foodstoresreview.commentFive %}
+    <p>{{ foodstoresreview.commentFive }}</p>
+{% endif %}
+</div>
+
+{% endblock %}

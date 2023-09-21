@@ -1,0 +1,47 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+
+
+
+    {% if foodstoresmeals.foodmapDishesOne %}
+   <!-- <div class="carousel-item active">-->
+      <img src="{{foodstoresmeals.foodmapDishesOne}}" class="d-block w-100" alt="..." style="max-width: 45%">
+    </div>
+     {% endif %}
+
+    {% if foodstoresmeals.foodmapDishesTwo %}
+    <!--<div class="carousel-item active">-->
+      <img src="{{ foodstoresmeals.foodmapDishesTwo }}" class="d-block w-100" alt="..." style="max-width: 45%">
+    </div>
+    {% endif %}
+
+    {% if foodstoresmeals.foodmapDishesThree %}
+    <!--<div class="carousel-item active">-->
+      <img src="{{ foodstoresmeals.foodmapDishesThree }}" class="d-block w-100" alt="..." style="max-width: 45%">
+    </div>
+    {% endif %}
+
+
+
+  <!--<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>-->
+
+<!--    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+
+
+
+{% endblock %}
