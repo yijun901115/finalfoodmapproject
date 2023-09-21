@@ -1,0 +1,23 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+<div style="display: flex; align-items: center; justify-content: center;">
+    <h3 class="m-3" style="color: #85B6FF;">關於我們-淡江好食光</h3>
+</div>
+
+<div class="m-3" style="display: flex; align-items: center; justify-content: center; font-size: 35px; ">
+    <h4 style="color: #fff;">
+        想知道淡江大學有什麼美食嗎？<br> <br>
+
+淡江好食光收錄了淡大校內的店家，以及附近區域：「大學城、大田寮、金雞母、水源街」的美食店家。
+<br>
+<br>
+等你來探索喔！快來看看吧～
+    </h4>
+</div>
+
+<div class="cartoon_map m-3" style="display: flex; align-items: center; justify-content: center;">
+    <img style="width: 100%;" src="{% static 'img/S__3862200411.png' %}" alt="">
+</div>
+
+{% endblock %}

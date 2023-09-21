@@ -1,0 +1,23 @@
+.container-chartsormapdetail {
+    position: relative;
+    height: 100%;
+}
+
+.rectangle-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    width: 100%; /* Set your desired width */
+    height: 250px; /* Set your desired height */
+    background-color: #434242; /* Set your desired background color */
+    /* You can also add more styling like borders, text, etc. */
+}
+
+/* Style for the image button */
+.image-button {
+    position: absolute;
+    top: 50%; /* Adjust this value to position the button vertically */
+    left: 50%; /* Adjust this value to position the button horizontally */
+    transform: translate(-50%, -50%);
+}

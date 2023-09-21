@@ -1,0 +1,28 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+<div class="banner">
+        <!-- <img src="/media/淡江大學城 1.png" alt=""> -->
+        <!-- <h3 style="text-align: center;">adwdawds<br>dsadwdawdaw</h3> -->
+
+        {% load static %}
+        <img src="{% static 'img/淡江大學城 1.png'%}" alt="">
+        <div class="title">
+            <h1>想不到吃什麼嗎？<br>來用好食光，美食吃光光</h1>
+            <button class="map"><a href="{% url 'chartandmap:map' %}"><img src="{% static 'img/tomapimage.png'%}" alt="">前往地圖</a></button>
+        </div>
+    </div>
+
+    <div class="contain1">
+        <img src="{% static 'img/淡江大學城2 1.png'%}" alt="">
+        <p>本網站蒐集了淡江大學附近各個區域的店家資料，以及做了詳細統整，讓同學們可以更清楚了解自己所屬的區域有哪些店家在經營。</p>
+
+    </div>
+
+    <div class="contain2">
+        <p>在眾多店家中，本網站根據最具權威的來源資料中作了由高至低的排名，同學們可根據排行榜的高低來判斷店家是否可靠。</p>
+        <img src="{% static 'img/大學城3 1.png'%}" alt="">
+    </div>
+
+    <button class="charts"><a href="{% url 'chartandmap:charts' %}"><img src="{% static 'img/3F3F3F29 1.png'%}" alt="">前往排行榜</a></button>
+
+{% endblock %}

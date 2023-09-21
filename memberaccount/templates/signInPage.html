@@ -1,0 +1,32 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container" style="display: flex; justify-content: center; align-items: center;">
+        <!--標題-->
+        <h1 style="color: #5ED7F1; margin-top: 20%"><img src="media/th-removebg-preview 1.png" alt=""
+                style="width: 60px;"> 登入
+        </h1>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <label style="color: #fff; font-weight: bold; font-size: 20px;">帳號</label>
+            <input class="form-control mb-3" type="username" name="username" id="username" required placeholder="">
+            <label style="color: #fff; font-weight: bold; font-size: 20px;">密碼</label>
+            <input class="form-control mb-3" type="password" name="password" id="password" required placeholder="">
+            <button style="display: block; margin: 0 auto;font-size: 20px; border-radius: 2px; color: #FFFFFF; margin-top: 50px; width: 100px;">登入</button>
+
+        </form>
+
+    </div>
+    <div style="display: flex; justify-content: center; margin: 0 auto; padding: 0;">
+        <a class="btn btn-secondary"
+            style="display: flex; font-size: 20px; margin: 0 auto; padding: 0; background: none; text-decoration: none; color: #5ED7F1; margin-top: 50px; "
+            role="button" href="{% url 'homepage'%}>
+            <p style="color: #fff; margin: 0 auto;">還沒有帳號?</p>
+            <p style="margin: 0 auto;;">加入會員</p>
+        </a>
+    </div>
+
+{% endblock %}

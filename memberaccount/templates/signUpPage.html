@@ -1,0 +1,28 @@
+{% extends 'thenavbarandbackground.html' %}
+{% block content %}
+{% load static %}
+    <div class="container" style="display: flex; justify-content: center; align-items: center;">
+        <!--標題-->
+        <h1 style="color: #5ED7F1; margin-top: 20%"><img
+                src="{% static 'img/320b285103d88a6dc9848a9f54223f97-removebg-preview 1.png' %}" alt="" style="width: 60px;"> 註冊
+        </h1>
+    </div>
+    <div class="container">
+        <form id="signup-form" method="post" action="">
+            {% csrf_token %}
+            <label style="color: #fff; font-weight: bold; font-size: 20px;">帳號</label>
+            {{form.username}}
+            <label style="color: #fff; font-weight: bold; font-size: 20px;">密碼</label>
+            {{form.password1 }}
+    <input type="submit" style="display: block; margin: 0 auto;font-size: 20px; border-radius: 2px; color: #FFFFFF; margin-top: 50px; width: 100px;" value="註冊">
+        </form>
+        <div style="display: flex; justify-content: center; margin: 0 auto; padding: 0;">
+            <a class="btn btn-secondary"
+                style="display: flex; font-size: 20px; margin: 0 auto; padding: 0; background: none; text-decoration: none; color: #5ED7F1; margin-top: 50px; "
+                role="button" href="{% url 'memberaccountnewuser:signin'%}">
+                <p style="color: #5ED7F1; margin: 0 auto;">回登入頁</p>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}
